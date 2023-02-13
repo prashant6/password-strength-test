@@ -1,13 +1,51 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*::before, *::after, * {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-color: hsl(261, 88%, 17%);
+  text-align: center;
+  color: hsl(260, 88%, 90%);
+}
+
+.strengthMeter {
+  position: relative;
+  width: 70%;
+  height: 2rem;
+  /* background-color: hsl(260, 88%, 90%) ; */
+  margin: 1rem auto;
+  border-radius: 1rem;
+  border: 3px solid hsl(261, 88%, 57%);
+  overflow: hidden;
+}
+
+.meter {
+  content: '';
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: calc(1% * var(--strength, 0));
+  background-color: hsl(259, 42%, 67%);
+  /* border-radius: 0.8rem; */
+  transition: width 200ms ;
+}
+
+.passwordInput {
+  width: 70%;
+  padding: .25rem .75rem;
+  background-color: hsl(261, 88%, 25%);
+  color: white;
+  border: 1px solid hsl(261, 88%, 57%);
+  outline: none;
+  text-align: center;
+  border-radius: .3rem;
+}
+
+.passwordInput:focus {
+  border-color: hsl(261, 88%, 80%) ;
+}
+
+.reasons > *{
+  margin-top: .5rem;
+  color: hsl(260, 80%, 80%);
 }
